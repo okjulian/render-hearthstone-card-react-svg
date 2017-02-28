@@ -1,8 +1,8 @@
 {
   "name": "eljuli",
   "version": "1.0.0",
-  "description": "Web about me",
-  "main": "index.js",
+  "description": "Render a hearthstone card using React and SVG",
+  "main": "pages/index.js",
   "scripts": {
     "start": "next start",
     "build": "next build",
@@ -15,6 +15,7 @@
     "html-to-react": "^1.2.2",
     "next": "^2.0.0-beta.16",
     "react": "^15.4.2",
+    "react-dom": "^15.4.2",
     "react-measure": "^1.4.5"
   },
   "devDependencies": {
