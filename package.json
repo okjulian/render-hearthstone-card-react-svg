@@ -1,5 +1,5 @@
 {
-  "name": "eljuli",
+  "name": "render-hearthstone-card-react-svg",
   "version": "1.0.0",
   "description": "Render a hearthstone card using React and SVG",
   "main": "pages/index.js",
