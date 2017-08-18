@@ -9,6 +9,7 @@ import CardElements from '../components/CardElements';
 import Snippet from '../components/Snippet';
 import Progression from '../components/Progression';
 import Layout from '../components/Layout';
+import Step from "../steps/1";
 
 const cardTitle = {
   id: 'GVG_096',
@@ -39,10 +40,7 @@ export default () => <Layout title="Render a hearthstone card using React and SV
     <link rel="stylesheet" href="/static/prism.css" />
     <script src="/static/prism.js" />
   </Head>
-  <Progression
-    before={<CardElements />}
-    after={<Card card={card} />}
-  />
+  <Step card={card} />
   <style jsx>{`
     :global(body) {
       margin-top: 1em;

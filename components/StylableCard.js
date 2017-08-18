@@ -22,11 +22,12 @@ const StylableCard = ({
   hide,
   noFont,
   noFlow,
+  wrapText
 }: { card: { title: string, id: string, text: string, race: string, rarity: string, set: string, cost: number, strength: number, health: number }, hide: Array<string>, noFont: boolean, noFlow: boolean }) =>
   <svg className="stylable-card" viewBox="0 0 751 1041">
     <title>Card</title>
     <defs>
-      <clipPath id="image-clip-path">
+      <clipPath display={hideElement(hide, 'clip')} id="image-clip-path">
         <ellipse id="card-clip" cx="390.5" cy="356.5" rx="217.5" ry="292.5" />
       </clipPath>
     </defs>
@@ -72,9 +73,15 @@ const StylableCard = ({
             </text>
         }
         <image id="bg-gvg" type="MSBitmapLayer" x="258" y="726" width="281" height="244" href={`/static/bg-${set}.png`} />
-        <text display={hideElement(hide, 'text')} x="130" y="826" width="520" height="230" fontSize="50px" fill="black" textAlign="center" color="black">
-          {text}
-        </text>
+        {wrapText ?
+          <foreignObject x="130" y="726" width="520" height="230" fontSize="50px" textAlign="center" color="black">
+            <div className="text-container" xmlns="http://www.w3.org/1999/xhtml">
+              {parser.parse(`<div class="text" style="vertical-align: middle; height: 100%; display: table-cell;">${text}</div>`)}
+            </div>
+          </foreignObject> :
+          <text display={hideElement(hide, 'text')} x="130" y="826" width="520" height="230" fontSize="50px" fill="black" textAlign="center" color="black">
+            {text}
+          </text>}
       </g>
     </g>
     <style jsx>{`
