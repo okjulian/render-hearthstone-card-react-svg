@@ -109,6 +109,8 @@ export const StepSix = () =>
     </Text>
   </Card>;
 
+
+export { default as CardElements } from "./CardElements";
 export * from "./HearthstoneCard";
 
 export default {

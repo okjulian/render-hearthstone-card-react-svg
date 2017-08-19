@@ -20,9 +20,16 @@ const CardElements = () => <div className="cardElements">
       flex-wrap: wrap;
       flex-grow: 1;
       align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
     }
     .cardElement {
-      width: 33%;
+      width: 33.3%;
+      height: 33.3%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .cardElement img {
       width: 100%;
