@@ -1,22 +1,37 @@
-# Render a hearthstone card using React and SVG
+# Hearthstone card using React and SVG
 
-https://render-hearthstone-card-react-svg.now.sh
-
-Component that accepts a card object of the following shape and renders a hearthstone card.
+Usage:
 
 ```
-var cardObj = {
-    "id":"EX1_116",
-    "set":"EXPERT1",
-    "type":"MINION",
-    "attack":6,
-    "health":2,
-    "rarity":"LEGENDARY",
-    "cost":5,
-    "name":"Leeroy Jenkins",
-    "text":"<b>Charge</b>. <b>Battlecry:</b> Summon two 1/1 Whelps for your opponent.",
-    "texture":"wow_penny_003_D"
-};
-```
+import React, { Component } from "react";
 
-Based on the work of http://hearthstonelabs.com/sunwell
+import {
+  Card,
+  Frame,
+  Cost,
+  Image,
+  Title,
+  Set,
+  Rarity,
+  Text,
+  Strength,
+  Health,
+  Race
+} from "./HearthstoneCard";
+
+const PilotedShredder = () =>
+  <Card>
+    <Image id="GVG_096" clip />
+    <Frame />
+    <Cost fontFamily="Belwe">4</Cost>
+    <Race fontFamily="Belwe">Mech</Race>
+    <Health fontFamily="Belwe">3</Health>
+    <Strength fontFamily="Belwe">4</Strength>
+    <Rarity id="common" />
+    <Title fontFamily="Belwe" flow>Piloted Shredder</Title>
+    <Set id="gvg" />
+    <Text rich>
+      {"<b>Deathrattle:</b> Summon a random 2-Cost minion."}
+    </Text>
+  </Card>;
+```

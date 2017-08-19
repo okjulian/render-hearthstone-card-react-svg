@@ -1,3 +1,7 @@
-.next
-node_modules
-**/.DS_Store
+/coverage
+/demo/dist
+/es
+/lib
+/node_modules
+/umd
+npm-debug.log*

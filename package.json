@@ -1,31 +1,41 @@
 {
-  "name": "render-hearthstone-card-react-svg",
+  "name": "hearthstone-card",
   "version": "1.0.0",
-  "description": "Render a hearthstone card using React and SVG",
-  "main": "pages/index.js",
+  "description": "hearthstone-card React component",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd",
+    "static"
+  ],
   "scripts": {
-    "start": "next start",
-    "build": "next build",
-    "dev": "next",
-    "test": "test"
+    "build": "nwb build-react-component",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "start": "nwb serve-react-demo",
+    "test": "nwb test-react",
+    "test:coverage": "nwb test-react --coverage",
+    "test:watch": "nwb test-react --server"
   },
-  "author": "ElJuli",
-  "license": "MIT",
   "dependencies": {
-    "html-to-react": "^1.2.2",
-    "next": "^2.0.0-beta.16",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-measure": "^1.4.5"
+    "html-to-react": "^1.2.11"
+  },
+  "peerDependencies": {
+    "react": "15.x"
   },
   "devDependencies": {
-    "babel-eslint": "^7.1.1",
-    "babel-plugin-transform-flow-strip-types": "^6.21.0",
-    "eslint": "^3.13.1",
-    "eslint-config-airbnb": "^14.0.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^3.0.2",
-    "eslint-plugin-react": "^6.9.0",
-    "flow-bin": "^0.38.0"
-  }
+    "eslint": "^4.5.0",
+    "nwb": "0.18.x",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "author": "",
+  "homepage": "",
+  "license": "MIT",
+  "repository": "",
+  "keywords": [
+    "react-component"
+  ]
 }
